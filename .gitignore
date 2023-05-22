@@ -1,4 +1,5 @@
 .idea
 __pycache__/
-settings.py
+config.py
 /.venv/
+/files/
