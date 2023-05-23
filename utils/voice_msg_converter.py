@@ -19,7 +19,7 @@ def send_text_from_voice(file_id):
     with audio_file as source:
         audio = r.record(source)
 
-    text = r.recognize_google(audio, language='ru-RU')
+    text = r.recognize_google(audio, language='ru',)
     os.remove(f'{paths.AUDIOS_DIR}/{file_id}.wav')
 
     return text
