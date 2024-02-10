@@ -5,8 +5,8 @@ from aiogram import Bot, Dispatcher
 from aiogram.types import File, Message
 
 import paths
-from utils.ogg_worker import remove_ogg
-from utils.voice_msg_converter import extract_text
+from ogg_worker import remove_ogg
+from voice_msg_converter import extract_text
 
 bot: Bot = Bot(os.environ["BOT_TOKEN"])
 dp: Dispatcher = Dispatcher()

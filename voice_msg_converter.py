@@ -4,7 +4,7 @@ import speech_recognition as sr
 from pydub.audio_segment import AudioSegment
 
 import paths
-from utils.ogg_worker import get_ogg_file
+from ogg_worker import get_ogg_file
 
 r: sr = sr.Recognizer()
 

@@ -6,6 +6,6 @@ meta:
 build:
   requirementsPath: requirements.txt
 run:
-  scriptName: src/entrypoint.py
+  scriptName: entrypoint.py
   persistenceMount: /data
   containerPort: 80
