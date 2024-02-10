@@ -4,7 +4,6 @@ import speech_recognition as sr
 from pydub.audio_segment import AudioSegment
 
 import paths
-from config import OPENAI_TOKEN
 from utils.ogg_worker import get_ogg_file
 
 r: sr = sr.Recognizer()
@@ -23,7 +22,7 @@ def extract_text(audio_file):
     with convert_ogg_to_flac(audio_file) as source:
         audio = r.record(source)
 
-    text = r.recognize_whisper_api(audio_data=audio, model='whisper-1', api_key=OPENAI_TOKEN)
+    text = r.recognize_whisper_api(audio_data=audio, model='whisper-1', api_key=os.environ["OPENAI_TOKEN"])
     os.remove(f'{paths.AUDIOS_DIR}/{audio_file}.FLAC')
 
     return text
