@@ -1,0 +1,11 @@
+meta:
+  environment: python
+  toolchain:
+    name: pip
+    version: 3.11
+build:
+  requirementsPath: pyproject.toml
+run:
+  scriptName: src/entrypoint.py
+  persistenceMount: /data
+  containerPort: 80
